@@ -22,8 +22,6 @@ public class test1 {
         passwordInput.sendKeys("secret_sauce");
         loginButton.click();
 
-
-
         //Use the code below, to match the expected text of the first item in the shop
         //Assert.assertEquals();
 
