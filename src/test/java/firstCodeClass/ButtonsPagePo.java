@@ -18,11 +18,6 @@ public class ButtonsPagePo {
     WebElement dynamicClickMeLabel = driver.findElement(By.xpath("//p[@id='dynamicClickMessage']"));
 
 
-    public ButtonsPagePo(WebDriver _driver) {
-        this.driver = _driver;
-    }
-
-
     //Declaring our methods
     //Clicks
     public void doubleClickFirstButton() {
