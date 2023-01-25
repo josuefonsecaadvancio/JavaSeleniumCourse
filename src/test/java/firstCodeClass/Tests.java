@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Tests {
     //Declaring an instance of buttonsPagePo, so that we can use its methods
-    ButtonsPagePo buttonsPagePo = new ButtonsPagePo();
     WebDriver driver;
+    ButtonsPagePo buttonsPagePo = new ButtonsPagePo(driver);
 
 
     @Test //@Test annotation tells selenium that this is an individual test scenario

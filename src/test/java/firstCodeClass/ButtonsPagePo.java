@@ -17,6 +17,10 @@ public class ButtonsPagePo {
     WebElement rightClickMeLabel = driver.findElement(By.xpath("//p[@id='rightClickMessage']"));
     WebElement dynamicClickMeLabel = driver.findElement(By.xpath("//p[@id='dynamicClickMessage']"));
 
+    public ButtonsPagePo(WebDriver _driver) {
+        driver = _driver;
+    }
+
 
     //Declaring our methods
     //Clicks
