@@ -14,23 +14,19 @@ public class ButtonsPagePo {
      private WebDriver driver;
     public ButtonsPagePo(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+        PageFactory.initElements(this.driver, this); // Needed to use the @FindByMethods
     }
 
-    @FindBy(xpath = "//button[@id='doubleClickBtn']")
+    @FindBy(xpath = "//button[@id='doubleClickBtn']") //@FindBy is an alternative way to declare a WebElement
     WebElement doubleClickMeButton;
     @FindBy(xpath = "//button[@id='rightClickBtn']")
     WebElement rightClickMeButton;
-
     @FindBy(xpath ="//button[(text() = 'Click Me')]")
     WebElement ClickMeButton;
-
     @FindBy(xpath ="//p[@id='doubleClickMessage']")
     WebElement doubleClickMeLabel;
-
     @FindBy(xpath = "//p[@id='rightClickMessage']")
     WebElement rightClickMeLabel;
-
     @FindBy(xpath = "//p[@id='dynamicClickMessage']")
     WebElement dynamicClickMeLabel;
 
@@ -69,6 +65,5 @@ public class ButtonsPagePo {
         Assert.assertTrue(dynamicClickMeLabel.isEnabled());
         Assert.assertEquals(expectedText, actualText);
     }
-
 
 }

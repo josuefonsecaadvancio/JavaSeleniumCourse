@@ -5,12 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverClass {
     private WebDriver driver;
-    private String browserName = "chrome";
-    private String url = "https://demoqa.com/buttons";
 
 
     public void initDriver(){
-
         System.out.println("Init!");
         System.setProperty("webdriver.chrome.driver", "C:\\browserDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -18,7 +15,7 @@ public class DriverClass {
 
 
     public WebDriver getDriver () {
-        return driver;
+        return driver;   //We return driver, since we want to mantain the same driver instance
     }
 
     public void quitBrowser() {
