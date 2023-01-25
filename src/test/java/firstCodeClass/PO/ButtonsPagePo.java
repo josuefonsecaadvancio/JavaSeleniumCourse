@@ -1,25 +1,40 @@
-package firstCodeClass;
+package firstCodeClass.PO;
 
+import firstCodeClass.DriverClass;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class ButtonsPagePo {
     //Declaring our WebElements
-    WebDriver driver;
-    WebElement doubleClickMeButton = driver.findElement(By.xpath("//button[@id='doubleClickBtn'])"));
-    WebElement rightClickMeButton = driver.findElement(By.xpath("//button[@id='rightClickBtn']"));
-    WebElement ClickMeButton = driver.findElement(By.xpath("//button[(text() = 'Click Me')]"));
-
-    WebElement doubleClickMeLabel = driver.findElement(By.xpath("//p[@id='doubleClickMessage']"));
-    WebElement rightClickMeLabel = driver.findElement(By.xpath("//p[@id='rightClickMessage']"));
-    WebElement dynamicClickMeLabel = driver.findElement(By.xpath("//p[@id='dynamicClickMessage']"));
-
-    public ButtonsPagePo(WebDriver _driver) {
-        driver = _driver;
+     private WebDriver driver;
+    public ButtonsPagePo(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(this.driver, this);
     }
+
+    @FindBy(xpath = "//button[@id='doubleClickBtn']")
+    WebElement doubleClickMeButton;
+    @FindBy(xpath = "//button[@id='rightClickBtn']")
+    WebElement rightClickMeButton;
+
+    @FindBy(xpath ="//button[(text() = 'Click Me')]")
+    WebElement ClickMeButton;
+
+    @FindBy(xpath ="//p[@id='doubleClickMessage']")
+    WebElement doubleClickMeLabel;
+
+    @FindBy(xpath = "//p[@id='rightClickMessage']")
+    WebElement rightClickMeLabel;
+
+    @FindBy(xpath = "//p[@id='dynamicClickMessage']")
+    WebElement dynamicClickMeLabel;
+
+
 
 
     //Declaring our methods

@@ -1,51 +1,56 @@
 package firstCodeClass;
 
+import firstCodeClass.PO.ButtonsPagePo;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.sql.Driver;
 
 public class Tests {
+    private WebDriver driver;
     //Declaring an instance of buttonsPagePo, so that we can use its methods
-    WebDriver driver;
-    ButtonsPagePo buttonsPagePo = new ButtonsPagePo(driver);
+    ButtonsPagePo buttonsPagePo;
+    DriverClass driverClass = new DriverClass();
 
 
     @Test //@Test annotation tells selenium that this is an individual test scenario
     public void testDoubleClickButton() {
+        driver.get("https://demoqa.com/buttons");
         buttonsPagePo.doubleClickFirstButton();
         buttonsPagePo.checkDoubleClickMeLabel();
     }
+
     @Test
     public void testRightClickButton() {
+        driver.get("https://demoqa.com/buttons");
         buttonsPagePo.rightClickSecondButton();
         buttonsPagePo.checkRightClickMeLabel();
     }
 
     @Test
     public void testDynamicButton() {
+        driver.get("https://demoqa.com/buttons");
         buttonsPagePo.clickThirdButton();
         buttonsPagePo.checkDynamicClickMeLabel("You have done a dynamic click");
     }
 
-
     @Before //@Before annotation tells Selenium that this will run before each @Test
-    public void initBrowser(){
-            System.setProperty("webdriver.chrome.driver", "C:\\browserDrivers\\chromedriver.exe");
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
+    public void iniDriver() {
+        driverClass.initDriver();
+        driver = driverClass.getDriver();
+        buttonsPagePo = new ButtonsPagePo(driver);
     }
 
     @After //@After annotation tells Selenium that this will run after each @Test
-    public void closeBrowser(){
-        driver.quit();
+    public void closeBrowser() {
+        driverClass.quitBrowser();
     }
 
     @AfterClass  //@AfterClass annotation tells Selenium that this will at the end of this class
-    public static void completeTesting(){
+    public static void completeTesting() {
         System.out.println("All tests complete :) ");
     }
-
 }
