@@ -51,8 +51,8 @@ public class ButtonsPagePo {
 
     //Asserts
     public void checkDoubleClickMeLabel() {
-        String expectedText = doubleClickMeLabel.getText();
-        String actualText = "You have done a double click";
+        String actualText = doubleClickMeLabel.getText();
+        String expectedText = "You have done a double click!";
         Assert.assertEquals(expectedText, actualText);
     }
 
