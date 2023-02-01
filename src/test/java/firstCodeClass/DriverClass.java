@@ -8,7 +8,7 @@ public class DriverClass {
 
 
     public void initDriver(){
-        System.out.println("Init!");
+        System.out.println("Initializing Driver!");
         System.setProperty("webdriver.chrome.driver", "C:\\browserDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
     }
