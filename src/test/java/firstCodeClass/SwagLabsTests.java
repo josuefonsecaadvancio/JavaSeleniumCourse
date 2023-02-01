@@ -1,6 +1,5 @@
 package firstCodeClass;
 
-import firstCodeClass.PO.ButtonsPagePo;
 import firstCodeClass.PO.LoginPo;
 import firstCodeClass.PO.ProductsPo;
 import org.junit.After;
