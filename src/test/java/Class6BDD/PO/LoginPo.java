@@ -1,4 +1,4 @@
-package firstCodeClass.PO;
+package Class6BDD.PO;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,7 +1,8 @@
-package firstCodeClass;
+package Class6BDD;
 
-import firstCodeClass.PO.LoginPo;
-import firstCodeClass.PO.ProductsPo;
+import Class6BDD.PO.LoginPo;
+import Class6BDD.PO.ProductsPo;
+import Class6BDD.driver.DriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,13 +15,13 @@ public class SwagLabsTests {
     ProductsPo productsPo;
 
 
-    DriverClass driverClass = new DriverClass();
+    DriverManager driverManager = new DriverManager();
 
 
     @Before
     public void iniDriver() {
-        driverClass.initDriver();
-        driver = driverClass.getDriver();
+        driverManager.initDriver();
+        driver = driverManager.getDriver();
         loginPo = new LoginPo(driver);
         productsPo = new ProductsPo(driver);
     }
@@ -47,7 +48,7 @@ public class SwagLabsTests {
 
     @After
     public void closeBrowser() {
-        driverClass.quitBrowser();
+        driverManager.quitBrowser();
     }
 
 }

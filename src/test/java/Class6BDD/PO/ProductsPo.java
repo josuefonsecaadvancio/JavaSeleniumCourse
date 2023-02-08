@@ -1,4 +1,4 @@
-package firstCodeClass.PO;
+package Class6BDD.PO;
 
 
 import org.junit.Assert;
@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.beans.Visibility;
 import java.time.Duration;
 
 public class ProductsPo {

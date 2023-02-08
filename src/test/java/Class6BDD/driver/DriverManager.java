@@ -1,10 +1,11 @@
-package firstCodeClass;
+package Class6BDD.driver;
 
+import Class6BDD.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DriverClass {
-    private WebDriver driver;
+public class DriverManager extends DriverBase {
+    protected WebDriver driver;
 
 
     public void initDriver(){
@@ -13,9 +14,9 @@ public class DriverClass {
         driver = new ChromeDriver();
     }
 
-
-    public WebDriver getDriver () {
-        return driver;   //We return driver, since we want to mantain the same driver instance
+    public DriverManager(){
+        super(getDriver());
+        driver = getDriver();
     }
 
     public void quitBrowser() {
