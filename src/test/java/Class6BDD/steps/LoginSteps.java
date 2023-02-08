@@ -6,11 +6,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class LoginSteps extends DriverManager {
-    LoginPo login = new LoginPo(driver);
 
 
-    @And("I fill login field with {string}")
-    public void iFillLoginFieldWith(String text) {
-        login.fillUserName(text);
+
+    LoginPo loginPo = new LoginPo(driver);
+
+    @And("I fill username {string}")
+    public void iFillUsername(String text) {
+        loginPo.fillUserName(text);
+    }
+
+    @Then("I fill password {string}")
+    public void iFillPassword(String arg0) {
     }
 }
