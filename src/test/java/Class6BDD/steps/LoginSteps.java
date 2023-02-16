@@ -5,6 +5,8 @@ import Class6BDD.driver.DriverManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
+import static org.junit.Assert.assertEquals;
+
 public class LoginSteps extends DriverManager {
 
 
@@ -17,6 +19,16 @@ public class LoginSteps extends DriverManager {
     }
 
     @Then("I fill password {string}")
-    public void iFillPassword(String arg0) {
+    public void iFillPassword(String text) {loginPo.fillPassword(text);
     }
-}
+
+    @Then("I click login button")
+    public void iClickLoginButton() {loginPo.clickLoginButton();}
+
+    @Then("I assert text")
+    public void iErrorMessage() {
+        loginPo.errorMessage();
+
+    }
+    }
+
