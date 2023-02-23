@@ -68,7 +68,6 @@
 
     </dependencies>
     <build>
-        <!-- Podria borrar build si no pienso usar verify /-->
         <plugins>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>

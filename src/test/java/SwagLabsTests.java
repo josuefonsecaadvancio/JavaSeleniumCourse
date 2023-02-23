@@ -1,8 +1,6 @@
-package Class6BDD;
-
-import Class6BDD.PO.LoginPo;
-import Class6BDD.PO.ProductsPo;
-import Class6BDD.driver.DriverManager;
+import PO.LoginPo;
+import PO.ProductsPo;
+import driver.DriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

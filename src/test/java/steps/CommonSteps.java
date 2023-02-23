@@ -1,6 +1,6 @@
-package Class6BDD.steps;
+package steps;
 
-import Class6BDD.driver.DriverManager;
+import driver.DriverManager;
 import io.cucumber.java.en.Then;
 
 public class CommonSteps extends DriverManager {

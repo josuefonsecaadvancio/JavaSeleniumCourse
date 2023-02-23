@@ -1,4 +1,4 @@
-package Class6BDD.PO;
+package PO;
 
 
 import org.junit.Assert;

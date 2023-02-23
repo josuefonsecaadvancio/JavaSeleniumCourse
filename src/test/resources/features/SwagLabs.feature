@@ -8,4 +8,5 @@
 
 
   Scenario: Login with locked_out_user and verify locked out message
+    Then I fill username "otherExample"
     #Complete this exercise

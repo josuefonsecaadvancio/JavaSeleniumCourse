@@ -1,4 +1,4 @@
-package Class6BDD.driver;
+package driver;
 
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
 import org.openqa.selenium.WebDriver;

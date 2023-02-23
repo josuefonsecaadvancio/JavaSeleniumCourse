@@ -1,16 +1,13 @@
-package Class6BDD.steps;
+package steps;
 
-import Class6BDD.PO.LoginPo;
-import Class6BDD.driver.DriverManager;
+import PO.LoginPo;
+import driver.DriverManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class LoginSteps extends DriverManager {
 
-
-
     LoginPo loginPo = new LoginPo(driver);
-
     @And("I fill username {string}")
     public void iFillUsername(String text) {
         loginPo.fillUserName(text);

@@ -1,4 +1,4 @@
-package Class6BDD.PO;
+package PO;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
