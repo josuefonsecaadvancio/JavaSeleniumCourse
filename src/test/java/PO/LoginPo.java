@@ -13,6 +13,24 @@ public class LoginPo {
         PageFactory.initElements(this.driver, this); // Needed to use the @FindByMethods
     }
 
+<<<<<<< Updated upstream:src/test/java/PO/LoginPo.java
+=======
+    @FindBy(xpath = "//*[@id=\"item_4_title_link\"]/div")
+    WebElement validatebackpackshoppingcart;
+
+    @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
+    WebElement shoppingcart;
+
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-backpack\"]")
+    WebElement addtocartbackpack;
+
+    @FindBy(xpath = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
+    WebElement errormessage;
+
+    @FindBy(xpath = "//*[@id=\"continue-shopping\"]")
+    WebElement  continueshoppingbutton;
+
+>>>>>>> Stashed changes:src/test/java/Class6BDD/PO/LoginPo.java
     @FindBy(id = "user-name")
     WebElement usernameField;
 
@@ -31,5 +49,22 @@ public class LoginPo {
     public void clickLoginButton(){
         this.loginButton.click();
     }
+<<<<<<< Updated upstream:src/test/java/PO/LoginPo.java
+=======
+
+    public void clickshoppingcart(){this.shoppingcart.click();}
+
+    public void clickcontinueshopping(){this.continueshoppingbutton.click();}
+    public void validatelabelbackpack(){assertEquals("REMOVE",this.addtocartbackpack.getText());}
+
+    public void validatebackpackshoppincart()
+    {assertEquals("Sauce Labs Backpack",this.validatebackpackshoppingcart.getText());}
+    public void clickaddtocartbackpack(){this.addtocartbackpack.click();}
+    public void errorMessage(){
+        System.out.println(errormessage.getText().equals("Epic sadface: Sorry, this user has been locked out."));
+    }
+
+
+>>>>>>> Stashed changes:src/test/java/Class6BDD/PO/LoginPo.java
 
 }
