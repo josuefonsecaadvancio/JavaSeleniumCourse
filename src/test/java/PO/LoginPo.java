@@ -22,6 +22,9 @@ public class LoginPo {
     @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
     WebElement shoppingcart;
 
+    @FindBy(xpath = "//*[@id=\"remove-sauce-labs-backpack\"]")
+    WebElement removesaucelabsbackpack;
+
     @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-backpack\"]")
     WebElement addtocartbackpack;
 
@@ -55,7 +58,7 @@ public class LoginPo {
     public void clickshoppingcart(){this.shoppingcart.click();}
 
     public void clickcontinueshopping(){this.continueshoppingbutton.click();}
-    public void validatelabelbackpack(){Assert.assertEquals("REMOVE",this.addtocartbackpack.getText());}
+    public void validatelabelbackpack(){Assert.assertEquals("REMOVE",this.removesaucelabsbackpack.getText());}
 
     public void validatebackpackshoppincart()
     {

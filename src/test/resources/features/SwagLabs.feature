@@ -21,5 +21,8 @@
     And I validate REMOVE label on button for backpack
     Then I click on shopping cart
     Then I validate backpack is on the shopping
+    And I click continue shopping button
+    Then I click on shopping cart
+    And I validate backpack is on the shopping
 
     #Complete this exercise
