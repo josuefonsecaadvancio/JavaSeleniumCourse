@@ -29,6 +29,7 @@ public class SwagLabsTests {
         loginPo.fillUserName("standard_user");
         loginPo.fillPassword("secret_sauce");
         loginPo.clickLoginButton();
+        loginPo.fillnamefield("Josue");
     }
 
     @Test

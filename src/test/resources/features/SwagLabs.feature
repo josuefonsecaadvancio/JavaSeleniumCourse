@@ -25,4 +25,25 @@
     Then I click on shopping cart
     And I validate backpack is on the shopping
 
+    Scenario: Shopping in demoblaze STORE
+    Given I go to "https://demoblaze.com/index.html"
+    Then I click on the samsung phone
+    Then I select add to cart phone
+    Then I click add to cart demon blaze shop
+    Then I assert label
+    Then I click on place order
+    Then I fill name "Josue"
+    Then I fill country "Mexico"
+    Then I fill city "Ensenada"
+    Then I fill card "0069"
+    Then I fill month "Marzo"
+    Then I fill year "2023"
+    Then I click the purchase button
+
+
+
+
+
+
+
     #Complete this exercise
